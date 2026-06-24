@@ -41,6 +41,23 @@
 '("r" "g" "b")
 (quote ("r" "g" "b"))
 
+(define (avg lst) (/ (apply + lst) (length lst)))
+(avg (list 1 2 3.5))
+
+((lambda (x) x) 3)
+
+(define (print-triangle height)
+  (if (zero? height) (void)
+      (begin
+        (display (make-string height #\*))
+        (newline)
+        (print-triangle (sub1 height)))))
+(print-triangle 6)
+
+
+
+
+
 
 
 
